@@ -2,6 +2,8 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ThreeDimensions from "./components/ThreeDimensions";
 import Transformation from "./components/Transformation";
+import WomenChapter from "./components/WomenChapter";
+import YoutubeVideo from "./components/YoutubeVideo";
 
 export default function Home() {
   return (
@@ -45,6 +47,8 @@ export default function Home() {
 
       <Transformation />
       <ThreeDimensions/>
+      <WomenChapter/>
+      <YoutubeVideo />
     </main>
   );
 }

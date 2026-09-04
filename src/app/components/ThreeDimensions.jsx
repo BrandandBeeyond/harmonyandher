@@ -49,10 +49,10 @@ const ThreeDimensions = () => {
                             className="dimension-card"
                         >
                             <div className="dimension-icon" aria-hidden="true" />
-                            <h4>{card.title}</h4>
-                            <p className="dimension-subtitle">{card.subtitle}</p>
-                            <p className="dimension-description">{card.description}</p>
-                            <a href="#discover" className="dimension-button">
+                            <h4 className="pb-2">{card.title}</h4>
+                            <p className="dimension-subtitle mt-3">{card.subtitle}</p>
+                            <p className="dimension-description pb-2">{card.description}</p>
+                            <a href="#discover" className="dimension-button mt-4">
                                 <span>{card.button}</span>
                                 <ArrowRight size={25} strokeWidth={1.6} aria-hidden="true" />
                             </a>
