@@ -3,24 +3,24 @@ import { ArrowRight, LeafIcon } from "lucide-react";
 const cards = [
     {
         title: "Professional Harmony",
-        subtitle: "Build your career. Without losing yourself.",
+        subtitle: "Grow professionally without losing yourself.",
         description:
-            "Navigate career decisions, professional pressure, leadership and growth with greater clarity and confidence.",
+            "Build career clarity, confidence and leadership while managing pressure, ambition and growth.",
         button: "Explore Professional Harmony",
     },
     {
         title: "Personal Harmony",
         subtitle: "Come back to yourself.",
         description:
-            "Reconnect with your emotions, identity, confidence and inner voice.",
+            "Reconnect with your emotions, identity, confidence, well-being and inner peace.",
         button: "Explore Personal Harmony",
     },
     {
-        title: "Relational Harmony",
-        subtitle: "Have meaningful relationships without losing yourself.",
+        title: "Family Harmony",
+        subtitle: "Love deeply without losing yourself.",
         description:
-            "Create healthier connections with family, partners and friends.",
-        button: "Explore Relational Harmony",
+            "Create stronger relationships through communication, compassion, bonding and healthy boundaries.",
+        button: "Explore Family Harmony",
     },
 ];
 

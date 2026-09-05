@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const titleLineOne = "Nashik's 1st";
+const titleLineOne = "Nashik’s 1st & Only";
 const titleLineTwo = "Harmony Coach";
-const titleLineThree = "Empowering Women";
+const titleLineThree = "Empowering For Women";
 const titleToType = `${titleLineTwo} ${titleLineThree}`;
 const heroTitle = `${titleLineOne} ${titleToType}`;
 
@@ -67,11 +67,11 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="hero-description">
-           Empowering women to achieve inner harmony, strength, & a fulfilled
-           life across Personal, Professional, & Family spaces.
+          Helping women create harmony across their Personal, Professional and Family lives—so they can live with calm, confidence and fulfilment.
+
           </p>
           <a href="#discover" className="hero-cta">
-            Begin your journey
+           Book a Conversation
             <span aria-hidden="true">&#8594;</span>
           </a>
         </div>

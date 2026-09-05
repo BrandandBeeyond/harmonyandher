@@ -48,6 +48,166 @@ h6 {
     linear-gradient(112deg, #bd176e 0%, #9c1b71 46%, #5c145e 100%);
 }
 
+.site-footer {
+  position: relative;
+  margin-top: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle, rgba(255, 239, 253, 0.85) 0 1px, transparent 1.5px) 7% 12% / 157px 139px,
+    radial-gradient(circle, rgba(255, 205, 234, 0.55) 0 1px, transparent 1.5px) 31% 58% / 211px 187px,
+    linear-gradient(112deg, #bd176e 0%, #9c1b71 46%, #5c145e 100%);
+  color: #fff;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: radial-gradient(46px 20px at 50% 0, #fffef0 98%, transparent 100%) repeat-x;
+  background-size: 92px 24px;
+  pointer-events: none;
+}
+
+.site-footer-inner {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 0.8fr 1.15fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+  padding: 3.3rem 0 5.5rem;
+}
+
+.site-footer-brand,
+.site-footer-links,
+.site-footer-connect {
+  min-width: 0;
+}
+
+.site-footer-logo {
+  width: 145px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 1.3rem;
+}
+
+.site-footer-phone {
+  display: block;
+  color: #fff;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-footer p,
+.site-footer a,
+.site-footer time {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.site-footer-description {
+  max-width: 210px;
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.site-footer h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.site-footer-rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 0.55rem 0 0.9rem;
+  background: #fff;
+}
+
+.site-footer-links nav {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.site-footer-links a,
+.site-footer-connect p {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.65rem;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.site-footer-links a:hover {
+  color: #fff;
+}
+
+.site-footer-connect {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 0.55rem;
+}
+
+.site-footer-connect p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.65rem;
+}
+
+.site-footer-connect a {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.site-footer-connect a:hover {
+  color: #fff;
+}
+
+.site-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+  padding: 1rem 0 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.65rem;
+}
+
+.site-footer-bottom strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .site-footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+    padding-top: 3rem;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hero-banner::after {
   content: "";
   position: absolute;
@@ -173,14 +333,14 @@ h6 {
 }
 
 .hero-copy h1 {
-  position: relative;
-  color: #fff9f1;
-  text-wrap: balance;
-  max-width: 550px;
-  margin: 0;
-  font-size: clamp(3.3rem, 7vw, 3.5rem);
-  font-weight: 500;
-  line-height: 1.1;
+    color: #fff9f1;
+    text-wrap: balance;
+    max-width: 550px;
+    margin: 0;
+    font-size: clamp(3rem, 9vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    position: relative;
 }
 
 .hero-title-measure,
@@ -441,7 +601,7 @@ h6 {
   pointer-events: none;
 }
 
-.three-dimensions{
+.three-dimensions {
   position: relative;
   min-height: 650px;
   overflow: hidden;
@@ -479,7 +639,9 @@ h6 {
   color: #111;
   text-align: center;
   box-shadow: 0 14px 22px rgba(45, 30, 25, 0.2);
-  transition: transform 250ms ease, box-shadow 250ms ease;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
 }
 
 .dimension-card:hover {
@@ -496,11 +658,11 @@ h6 {
 }
 
 .dimension-card h4 {
-    color: #a5286e;
-    margin: 1.1rem 0 0;
-    font-size: clamp(1.4rem, 0.8vw, 1.75rem);
-    font-weight: 600;
-    line-height: 1.1;
+  color: #a5286e;
+  margin: 1.1rem 0 0;
+  font-size: clamp(1.4rem, 0.8vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 .dimension-card p {
@@ -536,7 +698,9 @@ h6 {
   font-size: 0.86rem;
   font-weight: 600;
   text-align: left;
-  transition: background 220ms ease, box-shadow 220ms ease;
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .dimension-button:hover {
@@ -544,17 +708,21 @@ h6 {
   box-shadow: 0 7px 16px rgba(121, 27, 83, 0.3);
 }
 
-.dimension-button svg { transition: transform 220ms ease; }
-.dimension-button:hover svg { transform: translateX(4px); }
+.dimension-button svg {
+  transition: transform 220ms ease;
+}
+.dimension-button:hover svg {
+  transform: translateX(4px);
+}
 
-.women-chapter-sec{ 
+.women-chapter-sec {
   position: relative;
   height: 600px;
   min-height: 600px;
   margin-top: 0;
   overflow: hidden;
   padding: 0;
-  background: url('/images/svg/fullwolb.png') center top / 100% 100% no-repeat;
+  background: url("/images/svg/fullwolb.png") center top / 100% 100% no-repeat;
 }
 
 .women-chapter-sec > div {
@@ -571,7 +739,10 @@ h6 {
 }
 
 .youtube-section {
-  padding: 0 1.25rem 5rem;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 0 5rem;
   background: #fffdef;
 }
 
@@ -579,10 +750,9 @@ h6 {
   position: relative;
   display: grid;
   min-height: clamp(28rem, 42vw, 31rem);
-  place-items: center;
   overflow: hidden;
   border-radius: 0 0 4rem 4rem;
-  background: url('/images/bg/youtubebg.jpg') center center / cover no-repeat;
+  background: url("/images/bg/youtubebg.jpg") center center / cover no-repeat;
 }
 
 .youtube-card::after {
@@ -594,30 +764,56 @@ h6 {
 }
 
 .youtube-card h2 {
-  position: relative;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
   z-index: 1;
+  width: calc(100% - 4rem);
   margin: 0;
   color: #fffdf9;
-  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  font-size: clamp(2.5rem, 3.2vw, 4.6rem);
   font-weight: 500;
   letter-spacing: 0.14em;
+  line-height: 1.15;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.youtube-card p {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  z-index: 1;
+  width: min(90%, 1100px);
+  margin: 0;
+  color: #fffdf9;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(0.9rem, 1.35vw, 1.2rem);
+  line-height: 1.6;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .youtube-play {
-  position: absolute;
-  top: -0.2rem;
-  left: -0.2rem;
   z-index: 2;
-  display: grid;
-  width: 7.5rem;
-  height: 7.5rem;
-  place-items: center;
+  cursor: pointer;
+  background: #fffdf6;
   border: 0.25rem solid #a5286e;
   border-radius: 50%;
-  background: #fffdf6;
+  place-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  transition:
+    transform 0.22s,
+    background 0.22s,
+    box-shadow 0.22s;
+  display: grid;
+  position: absolute;
+  top: -0.2rem;
+  margin-left: 5px;
+  left: -0.2rem;
+  margin-top: 4px;
   box-shadow: 0 0 0 1.2rem #fffdf6;
-  cursor: pointer;
-  transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
 }
 
 .youtube-play span {
@@ -627,12 +823,16 @@ h6 {
   border-top: 1.35rem solid transparent;
   border-bottom: 1.35rem solid transparent;
   border-left: 2.15rem solid #a5286e;
-  transition: transform 220ms ease, border-left-color 220ms ease;
+  transition:
+    transform 220ms ease,
+    border-left-color 220ms ease;
 }
 
 .youtube-play:hover {
   background: #a5286e;
-  box-shadow: 0 0 0 1.2rem #fffdf6, 0 10px 25px rgba(80, 17, 58, 0.25);
+  box-shadow:
+    0 0 0 1.2rem #fffdf6,
+    0 10px 25px rgba(80, 17, 58, 0.25);
   transform: scale(1.06);
 }
 
@@ -641,8 +841,183 @@ h6 {
   transform: scale(1.08);
 }
 
+.happy-womans-section {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+/* -------------------------------- */
+/* TITLE */
+/* -------------------------------- */
+
+.happy-womans-section h2 {
+  position: relative;
+  z-index: 20;
+
+  margin: 0;
+  padding-top: 60px;
+
+  text-align: center;
+
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* -------------------------------- */
+/* CAROUSEL */
+/* -------------------------------- */
+
+.happy-carousel {
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+
+  margin: 100px auto 0;
+
+  perspective: 2000px;
+
+  transform-style: preserve-3d;
+}
+
+/* -------------------------------- */
+/* RING */
+/* -------------------------------- */
+
+.happy-ring {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  user-select: none;
+}
+
+/* -------------------------------- */
+/* CARDS */
+/* -------------------------------- */
+
+.happy-ring-card {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+
+  user-select: none;
+
+  will-change: transform;
+}
+
+/* -------------------------------- */
+/* DRAGGER */
+/* -------------------------------- */
+
+.happy-dragger {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  touch-action: none;
+  user-select: none;
+}
+
+.happy-dragger:active {
+  cursor: grabbing;
+}
+
+/* -------------------------------- */
+/* STATS */
+/* -------------------------------- */
+
+.happy-stats {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.happy-stats > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.happy-stats strong {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.happy-stats span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.bg-harmony-her {
+  background: url("/images/bestbg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .happy-carousel {
+    width: 240px;
+    height: 240px;
+
+    margin-top: 70px;
+  }
+
+  .happy-womans-section h2 {
+    padding-top: 40px;
+
+    font-size: 28px;
+  }
+
+  .happy-stats {
+    gap: 30px;
+
+    margin-top: 70px;
+  }
+
+  .happy-stats strong {
+    font-size: 26px;
+  }
+
+  .happy-stats span {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 640px) {
-  .youtube-section { padding: 0 0.9rem 3.5rem; }
+  .youtube-section {
+    padding: 0 0 3.5rem;
+  }
   .youtube-card {
     min-height: 19rem;
     border-radius: 0 0 2.5rem 2.5rem;
@@ -651,6 +1026,11 @@ h6 {
   .youtube-card h2 {
     font-size: clamp(1.65rem, 8vw, 2.5rem);
     letter-spacing: 0.08em;
+  }
+  .youtube-card p {
+    top: 58%;
+    width: calc(100% - 2rem);
+    font-size: 0.8rem;
   }
   .youtube-play {
     width: 5.25rem;
@@ -665,6 +1045,395 @@ h6 {
   }
 }
 
+.happy-womans-section {
+  position: relative;
+  min-height: 42rem;
+  overflow: visible;
+  padding: 4rem 1rem 3.5rem;
+  background: #fffdef;
+  color: #a5286e;
+  text-align: center;
+}
+
+.happy-womans-section h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.happy-womans-section .happy-carousel {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 23rem;
+  margin: 1.5rem auto 0;
+  perspective: 1200px;
+  overflow: visible;
+}
+
+.happy-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7.5rem;
+  height: 18rem;
+  margin: -9rem 0 0 -3.75rem;
+  transform-style: preserve-3d;
+}
+
+.happy-ring-card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1.15rem;
+  background-color: #a5286e;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  box-shadow: 0 12px 22px rgba(84, 34, 60, 0.2);
+  transform-style: preserve-3d;
+}
+
+.happy-ring-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(116, 24, 82, 0.2);
+  pointer-events: none;
+}
+
+.happy-dragger {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.happy-dragger:active {
+  cursor: grabbing;
+}
+
+.happy-womans-section .happy-stats {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+}
+
+.happy-carousel {
+  position: relative;
+  height: 22rem;
+  max-width: 100%;
+  margin: 1.4rem auto 0;
+  perspective: 1200px;
+}
+
+.happy-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.happy-carousel-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 11rem;
+  height: 19rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1.1rem;
+  padding: 0;
+  background: #a5286e;
+  box-shadow: 0 13px 20px rgba(84, 34, 60, 0.18);
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition:
+    transform 650ms cubic-bezier(0.22, 0.8, 0.25, 1),
+    opacity 650ms ease,
+    filter 650ms ease;
+}
+
+.happy-carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.84;
+  transition: transform 600ms ease;
+}
+
+.happy-carousel-card:hover img {
+  transform: scale(1.06);
+}
+.happy-carousel-card-0 {
+  transform: translateX(-50%) translateY(1rem) rotateY(0) rotateZ(0) scale(1.12);
+  z-index: 7;
+}
+.happy-carousel-card-1 {
+  transform: translateX(1rem) translateY(0.5rem) rotateY(-15deg) rotateZ(3deg)
+    scale(1.04);
+  z-index: 6;
+}
+.happy-carousel-card-2 {
+  transform: translateX(12rem) translateY(0) rotateY(-22deg) rotateZ(5deg)
+    scale(0.96);
+  z-index: 5;
+}
+.happy-carousel-card-3 {
+  transform: translateX(23rem) translateY(-0.8rem) rotateY(-28deg) rotateZ(7deg)
+    scale(0.88);
+  z-index: 4;
+}
+.happy-carousel-card-\-1 {
+  transform: translateX(calc(-100% - 1rem)) translateY(0.5rem) rotateY(15deg)
+    rotateZ(-3deg) scale(1.04);
+  z-index: 6;
+}
+.happy-carousel-card-\-2 {
+  transform: translateX(calc(-100% - 12rem)) translateY(0) rotateY(22deg)
+    rotateZ(-5deg) scale(0.96);
+  z-index: 5;
+}
+.happy-carousel-card-\-3 {
+  transform: translateX(calc(-100% - 23rem)) translateY(-0.8rem) rotateY(28deg)
+    rotateZ(-7deg) scale(0.88);
+  z-index: 4;
+}
+
+.happy-carousel-controls {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.happy-carousel-controls button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid rgba(165, 40, 110, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  color: #a5286e;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.happy-carousel-controls button:hover {
+  background: #a5286e;
+  color: #fff;
+}
+
+.happy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 760px;
+  margin: 1.3rem auto 0;
+}
+
+.happy-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.happy-stats strong {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 500;
+}
+.happy-stats span {
+  color: #263e56;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .happy-womans-section .happy-carousel {
+    height: 20rem;
+  }
+  .happy-ring {
+    width: 6.5rem;
+    height: 15rem;
+    margin: -7.5rem 0 0 -3.25rem;
+  }
+
+  .happy-carousel-card {
+    width: 9rem;
+    height: 16rem;
+  }
+  .happy-carousel-card-1 {
+    transform: translateX(0.5rem) translateY(0.5rem) rotateY(-15deg)
+      rotateZ(3deg) scale(1.04);
+  }
+  .happy-carousel-card-2 {
+    transform: translateX(9.5rem) rotateY(-22deg) rotateZ(5deg) scale(0.96);
+  }
+  .happy-carousel-card-3 {
+    transform: translateX(18rem) rotateY(-28deg) rotateZ(7deg) scale(0.88);
+  }
+  .happy-carousel-card-\-1 {
+    transform: translateX(calc(-100% - 0.5rem)) translateY(0.5rem)
+      rotateY(15deg) rotateZ(-3deg) scale(1.04);
+  }
+  .happy-carousel-card-\-2 {
+    transform: translateX(calc(-100% - 9.5rem)) rotateY(22deg) rotateZ(-5deg)
+      scale(0.96);
+  }
+  .happy-carousel-card-\-3 {
+    transform: translateX(calc(-100% - 18rem)) rotateY(28deg) rotateZ(-7deg)
+      scale(0.88);
+  }
+}
+
+@media (max-width: 640px) {
+  .happy-womans-section {
+    min-height: 35rem;
+    padding-top: 3rem;
+  }
+  .happy-womans-section .happy-carousel {
+    height: 18rem;
+    margin-top: 1rem;
+  }
+  .happy-ring {
+    width: 5.5rem;
+    height: 12rem;
+    margin: -6rem 0 0 -2.75rem;
+  }
+  .happy-carousel-card {
+    width: 7rem;
+    height: 13rem;
+  }
+  .happy-carousel-card-2,
+  .happy-carousel-card-3,
+  .happy-carousel-card-\-2,
+  .happy-carousel-card-\-3 {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .happy-carousel-card-1 {
+    transform: translateX(0) translateY(0.5rem) rotateY(-12deg) rotateZ(2deg)
+      scale(1);
+  }
+  .happy-carousel-card-\-1 {
+    transform: translateX(calc(-100% - 0.35rem)) translateY(0.5rem)
+      rotateY(12deg) rotateZ(-2deg) scale(1);
+  }
+  .happy-carousel-controls {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .happy-stats {
+    gap: 0.5rem;
+  }
+  .happy-stats strong {
+    font-size: 1.55rem;
+  }
+  .happy-stats span {
+    font-size: 0.8rem;
+  }
+}
+
+.meet-rupali-section {
+  width: 100%;
+  padding: 5rem 2rem 6rem;
+  background: #fffdef;
+  color: #243b52;
+}
+
+.meet-rupali-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+  width: min(100%, 1280px);
+  margin: 0 auto;
+}
+
+.meet-rupali-visual {
+  position: relative;
+  flex: 0 0 clamp(19rem, 27vw, 22rem);
+  height: clamp(25rem, 35vw, 31rem);
+}
+
+.meet-rupali-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-top-right-radius: 5rem;
+  background: #a5286e;
+}
+
+.meet-rupali-visual img {
+  inset: 1.2rem 0 0 1.2rem !important;
+  z-index: 1;
+  width: calc(100% - 1.2rem) !important;
+  height: calc(100% - 1.2rem) !important;
+  border-top-right-radius: 5rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.meet-rupali-copy {
+  flex: 1;
+}
+
+.meet-rupali-copy h2 {
+  margin: 0;
+  color: #a5286e;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.meet-rupali-copy h3 {
+  margin: 0.8rem 0 1.2rem;
+  color: #a5286e;
+  font-family: var(--font-playfair-display), serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.meet-rupali-copy p {
+  max-width: 830px;
+  margin: 0 0 0.8rem;
+  color: #243b52;
+  font-family: var(--font-playfair-display), serif;
+  font-size: clamp(1rem, 1.4vw, 1.28rem);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .meet-rupali-section {
+    padding: 4rem 1.25rem 5rem;
+  }
+  .meet-rupali-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3rem;
+  }
+  .meet-rupali-visual {
+    width: min(80vw, 24rem);
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .meet-rupali-visual {
+    height: 28rem;
+  }
+  .meet-rupali-copy h2 {
+    font-size: 2.5rem;
+  }
+}
 
 @media (max-width: 1023px) {
   .intro-section {
@@ -858,5 +1627,7 @@ h6 {
     background-size: 100% 100%;
   }
 
-  .women-chapter-sec > div { padding-top: 3rem; }
+  .women-chapter-sec > div {
+    padding-top: 3rem;
+  }
 }

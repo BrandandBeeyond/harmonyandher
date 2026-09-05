@@ -4,6 +4,9 @@ import ThreeDimensions from "./components/ThreeDimensions";
 import Transformation from "./components/Transformation";
 import WomenChapter from "./components/WomenChapter";
 import YoutubeVideo from "./components/YoutubeVideo";
+import MeetRupali from "./components/MeetRupali";
+import HappyWomans from "./components/HappyWomans";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -27,12 +30,12 @@ export default function Home() {
             <span>She Just Needs <em>Harmony.</em></span>
           </h2>
           <p className="intro-lead">
-            A transformational space for young professional women to create
-            harmony between who they are, what they do and how they live.
+      A transformational space that helps women create harmony between who they are, what they do and how they live.
+
           </p>
           <p className="intro-detail">
-            With <strong>Rupali Surana</strong> - India&apos;s 1st &amp; Only Women
-            Harmony Coach exclusively for Young Professionals.
+            With <strong className="text-[#982b6a]">Rupali Surana -  Women Harmony Coach</strong> , helping women balance their personal, professional and family lives.
+
           </p>
           <div className="intro-actions">
             <a href="#journey" className="intro-button intro-button-primary">
@@ -49,6 +52,9 @@ export default function Home() {
       <ThreeDimensions/>
       <WomenChapter/>
       <YoutubeVideo />
+      <MeetRupali />
+      <HappyWomans />
+      <Footer />
     </main>
   );
 }

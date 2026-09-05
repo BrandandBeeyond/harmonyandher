@@ -61,7 +61,7 @@ export default function Transformation() {
               text-[#a52a70]
             "
             >
-              But Is She Feeling Everything
+              But Is She Feeling Fulfilled?
             </h3>
 
 
@@ -78,15 +78,15 @@ export default function Transformation() {
             "
             >
               <p className="m-0">
-                Building a career. Managing relationships. Meeting expectations.
-                Taking care of everyone. Trying to stay healthy. Trying to stay
-                happy.
+                Managing her career. Nurturing relationships. Meeting expectations. Taking care of everyone. Trying to stay healthy and happy.
+
               </p>
 
               <p className="mt-[2px]">
-                And somewhere along the way,{" "}
+                And somewhere along the way,
+
                 <span className="text-[#a52a70]">
-                  she forgets herself.
+               she forgets herself.
                 </span>
               </p>
             </div>
