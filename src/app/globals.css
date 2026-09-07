@@ -71,11 +71,7 @@ h6 {
 .site-footer {
   position: relative;
   margin-top: 0;
-  overflow: hidden;
-  background:
-    radial-gradient(circle, rgba(255, 239, 253, 0.85) 0 1px, transparent 1.5px) 7% 12% / 157px 139px,
-    radial-gradient(circle, rgba(255, 205, 234, 0.55) 0 1px, transparent 1.5px) 31% 58% / 211px 187px,
-    linear-gradient(112deg, #bd176e 0%, #9c1b71 46%, #5c145e 100%);
+  background: url("/images/svg/footerbg.png") center / 100% 100% no-repeat;
   color: #fff;
 }
 
@@ -86,7 +82,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 24px;
-  background: radial-gradient(46px 20px at 50% 0, #fffef0 98%, transparent 100%) repeat-x;
+
   background-size: 92px 24px;
   pointer-events: none;
 }
@@ -353,14 +349,14 @@ h6 {
 }
 
 .hero-copy h1 {
-    color: #fff9f1;
-    text-wrap: balance;
-    max-width: 550px;
-    margin: 0;
-    font-size: clamp(3rem, 9vw, 2.5rem);
-    font-weight: 500;
-    line-height: 1.1;
-    position: relative;
+  color: #fff9f1;
+  text-wrap: balance;
+  max-width: 550px;
+  margin: 0;
+  font-size: clamp(3rem, 9vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  position: relative;
 }
 
 .hero-title-measure,
@@ -1594,9 +1590,6 @@ h6 {
 }
 
 @media (max-width: 640px) {
-  .hero-banner {
-    min-height: 820px;
-  }
   .hero-brand {
     display: block;
     position: absolute;
@@ -1626,8 +1619,11 @@ h6 {
     width: 112%;
   }
   .hero-woman {
-    width: 77%;
+    width: 73%;
+    bottom: 63px;
+    right: 2%;
   }
+
   .hero-glow-left {
     left: 8%;
     top: 29%;
@@ -1689,5 +1685,289 @@ h6 {
 
   .women-chapter-sec > div {
     padding-top: 3rem;
+  }
+}
+
+/* Final mobile layout pass: keep every section inside the viewport. */
+@media (max-width: 640px) {
+  .hero-banner {
+    min-height: 622px;
+  }
+
+  .hero-copy {
+    padding-top: 5rem;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(1.72rem, 2vw, 2rem) !important;
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin-top: 1.25rem;
+    line-height: 1.55;
+  }
+
+  .hero-cta {
+    padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+    font-size: 0.6rem;
+  }
+
+  .intro-section {
+    min-height: 463px;
+  }
+  .hero-logo {
+    transform-origin: 48% 96%;
+    width: 77%;
+    max-width: none;
+    max-height: none;
+    animation: 1.8s cubic-bezier(0.22, 1, 0.36, 1) both hero-agni-grow;
+    bottom: 50px;
+    right: 0;
+  }
+  .intro-content {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding: 3.5rem 0 4rem;
+  }
+  .bg-transformation:before {
+    inset: -90px 0 0;
+  }
+
+  .intro-content h2 {
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
+  }
+
+  .intro-lead,
+  .intro-detail {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .intro-actions {
+    flex-direction: row;
+    gap: 0.75rem;
+    width: min(80%, 17rem);
+    margin-top: 2rem;
+  }
+  .bg-transformation:before {
+    background: url("/images/svg/topshapevector.png") top / contain no-repeat;
+  }
+
+  .intro-button {
+    justify-content: space-between;
+  }
+
+  .bg-transformation {
+    min-height: auto !important;
+    background-color: #fff !important;
+  }
+
+  .bg-transformation > div {
+    min-height: auto !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+    padding: 0rem 1rem !important;
+  }
+
+  .bg-transformation > div > div:first-child {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .bg-transformation > div > div:first-child > div {
+    width: calc((100% - 1rem) / 3) !important;
+    height: 17rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  .bg-transformation > div > div:last-child {
+    width: 100%;
+  }
+
+  .bg-transformation h2 {
+    font-size: clamp(1.3rem, 11vw, 3.4rem) !important;
+  }
+
+  .bg-transformation h3 {
+    font-size: clamp(1.45rem, 3vw, 3rem) !important;
+  }
+
+  .bg-transformation p {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .three-dimensions {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .dimensions-heading h3 {
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+  }
+
+  .dimensions-heading .line1,
+  .dimensions-heading .line2 {
+    width: 4.5rem;
+  }
+
+  .dimension-card {
+    width: 100%;
+    border-radius: 1.75rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .women-chapter-sec {
+    min-height: 600px;
+  }
+
+  .women-chapter-sec > div {
+    padding: 3rem 1rem 0;
+  }
+
+  .women-chapter-sec img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .youtube-section {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+  .youtube-card {
+    min-height: 20rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .youtube-content h2 {
+    letter-spacing: 0.04em;
+  }
+
+  .meet-rupali-section {
+    padding: 3.5rem 1rem 4rem;
+  }
+
+  .meet-rupali-inner {
+    gap: 2rem;
+  }
+
+  .meet-rupali-visual {
+    width: min(100%, 20rem);
+    height: 25rem;
+    margin: 0 auto;
+  }
+
+  .meet-rupali-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .meet-rupali-copy h3 {
+    font-size: 1.05rem;
+  }
+
+  .meet-rupali-copy p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .happy-womans-section {
+    min-height: 34rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .happy-womans-section h2 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .happy-womans-section .happy-carousel {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+
+  .happy-stats {
+    width: calc(100% - 2rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .happy-stats span {
+    line-height: 1.2;
+  }
+
+  .site-footer-inner {
+    width: calc(100% - 2rem);
+    gap: 2rem 1rem;
+  }
+
+  .site-footer-description {
+    max-width: 17rem;
+  }
+
+  .site-footer-bottom {
+    width: calc(100% - 2rem);
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 640px) {
+  html,
+  body,
+  main {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero-art {
+    bottom: -5rem;
+    height: 46%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .intro-content h2,
+  .bg-transformation h2,
+  .three-dimensions h3,
+  .women-chapter-sec h3,
+  .youtube-content h2,
+  .happy-womans-section h2,
+  .meet-rupali-copy h2 {
+    font-size: clamp(1.6rem, 4.5vw, 2.8rem) !important;
+  }
+
+  .bg-transformation h3 {
+    font-size: clamp(1.75rem, 8vw, 2.6rem) !important;
+  }
+
+  .meet-rupali-copy h3,
+  .site-footer h2 {
+    font-size: 1rem;
+  }
+
+  .happy-womans-section {
+    overflow-x: hidden;
+  }
+
+  .happy-womans-section .happy-carousel {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  .happy-ring {
+    transform: translateZ(0);
   }
 }

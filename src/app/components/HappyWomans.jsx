@@ -26,11 +26,17 @@ export default function HappyWomans() {
     if (!section || !ring || !dragger || !cards.length) return undefined;
 
     gsap.registerPlugin(Draggable);
+    const ringRadius = window.innerWidth <= 640
+      ? 165
+      : window.innerWidth <= 900
+        ? 420
+        : 560;
+
     gsap.set(ring, { rotationY: 180 });
     gsap.set(cards, {
       rotateY: (index) => index * -18,
-      transformOrigin: "50% 50% 560px",
-      z: -560,
+      transformOrigin: `50% 50% ${ringRadius}px`,
+      z: -ringRadius,
       opacity: 1,
       backfaceVisibility: "hidden",
     });
@@ -106,7 +112,7 @@ export default function HappyWomans() {
       </section>
 
       <section className="bg-harmony-her relative -top-[220px] min-h-[800px]"></section>
-      <div className="-mt-[200px]"></div>
+      <div className="-mt-[253px]"></div>
     </>
 
   );
