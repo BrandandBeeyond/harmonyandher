@@ -474,6 +474,8 @@ h6 {
   width: 80%;
   max-width: none;
   max-height: none;
+  transform-origin: 50% 100%;
+  animation: hero-agni-grow 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-woman {
@@ -481,6 +483,36 @@ h6 {
   bottom: 0;
   z-index: 1;
   width: 72%;
+  animation: hero-woman-rise 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes hero-agni-grow {
+  from {
+    opacity: 0;
+    transform: translateY(4rem) scale(0.68);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-woman-rise {
+  from {
+    opacity: 0;
+    transform: translateY(7rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo,
+  .hero-woman {
+    animation: none;
+  }
 }
 
 .hero-brand {
