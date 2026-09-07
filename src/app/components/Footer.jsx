@@ -33,15 +33,15 @@ export default function Footer() {
         <div className="site-footer-connect">
           <h2 id="footer-title">Connect</h2>
           <span className="site-footer-rule" aria-hidden="true" />
-          <p>Phone: <a href="#">[Add Number]</a></p>
-          <p>Email: <a href="mailto:">[Add Email]</a></p>
+          <p>Phone: <a href="#">+91 -9876543219</a></p>
+          <p>Email: <a href="mailto:">xyz@gmail.com</a></p>
           <a href="#">Instagram</a>
           <a href="#">YouTube</a>
         </div>
       </div>
       <div className="site-footer-bottom">
         <strong>Live Fully. Love Deeply. Lead in Harmony.</strong>
-        <span>&copy; 2026 Harmony &amp; Her. All Rights Reserved.</span>
+        <span>&copy; 2026 Harmony &amp; Her. All Rights Reserved. - Brand &amp; Beyond </span>
       </div>
     </footer>
   );

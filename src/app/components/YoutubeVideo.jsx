@@ -5,10 +5,13 @@ export default function YoutubeVideo() {
         <button className="youtube-play" type="button" aria-label="Play YouTube video">
           <span aria-hidden="true" />
         </button>
-        <h2 id="youtube-title">Discover Your Path to Harmony</h2>
-
-        <p>See how Harmony & Her can help you pause, reconnect and create meaningful change in every area of your life.
-</p>
+        <div className="youtube-content">
+          <h2 id="youtube-title">Discover Your Path to Harmony</h2>
+          <p>
+            See how Harmony &amp; Her can help you pause, reconnect and create
+            meaningful change in every area of your life.
+          </p>
+        </div>
       </div>
     </section>
   );

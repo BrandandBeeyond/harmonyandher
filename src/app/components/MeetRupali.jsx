@@ -16,7 +16,7 @@ export default function MeetRupali() {
 
         <div className="meet-rupali-copy">
           <h2 id="meet-rupali-title">Meet Rupali Surana</h2>
-          <h3>Nashik&apos;s 1st &amp; & Only Harmony Coach Exclusively for Women</h3>
+          <h3>Nashik&apos;s <span className="text-[45px]">1</span> st &amp;  Only Harmony Coach Exclusively for Women</h3>
           <p>
             Rupali Surana is a Women Harmony Coach dedicated to helping women create greater harmony across their personal, professional and family lives.
 
