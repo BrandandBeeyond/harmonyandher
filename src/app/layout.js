@@ -1,5 +1,7 @@
 import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "./components/SmoothScroll";
+import AosProvider from "./components/AosProvider";
 
 const headingFont = Playfair_Display({
   variable: "--font-playfair-display",
@@ -26,7 +28,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${headingFont.variable} ${paraFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScroll>
+          <AosProvider>{children}</AosProvider>
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

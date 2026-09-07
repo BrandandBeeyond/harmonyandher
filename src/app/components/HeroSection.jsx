@@ -70,7 +70,7 @@ const HeroSection = () => {
           Helping women create harmony across their Personal, Professional and Family lives—so they can live with calm, confidence and fulfilment.
 
           </p>
-          <a href="#discover" className="hero-cta">
+          <a href="#discover" className="hero-cta" data-aos="fade-up" data-aos-delay="0">
            Book a Conversation
             <span aria-hidden="true">&#8594;</span>
           </a>

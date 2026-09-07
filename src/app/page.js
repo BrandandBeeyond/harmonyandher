@@ -7,6 +7,7 @@ import YoutubeVideo from "./components/YoutubeVideo";
 import MeetRupali from "./components/MeetRupali";
 import HappyWomans from "./components/HappyWomans";
 import Footer from "./components/Footer";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       
       </section>
 
+      <ScrollReveal>
       <section id="discover" className="intro-section" aria-labelledby="intro-title">
         <div className="intro-content">
           <h2 id="intro-title">
@@ -38,10 +40,10 @@ export default function Home() {
 
           </p>
           <div className="intro-actions">
-            <a href="#journey" className="intro-button intro-button-primary">
+            <a href="#journey" className="intro-button intro-button-primary" data-aos="fade-up" data-aos-delay="0">
               Begin Your Journey <span aria-hidden="true">&#8594;</span>
             </a>
-            <a href="/about-rupali" className="intro-button intro-button-secondary">
+            <a href="/about-rupali" className="intro-button intro-button-secondary" data-aos="fade-up" data-aos-delay="150">
               Meet Rupali <span aria-hidden="true">&#8594;</span>
             </a>
           </div>
@@ -55,6 +57,7 @@ export default function Home() {
       <MeetRupali />
       <HappyWomans />
       <Footer />
+      </ScrollReveal>
     </main>
   );
 }

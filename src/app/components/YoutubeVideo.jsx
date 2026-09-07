@@ -2,7 +2,7 @@ export default function YoutubeVideo() {
   return (
     <section className="youtube-section" aria-labelledby="youtube-title">
       <div className="youtube-card">
-        <button className="youtube-play" type="button" aria-label="Play YouTube video">
+        <button className="youtube-play" type="button" aria-label="Play YouTube video" data-aos="fade-up">
           <span aria-hidden="true" />
         </button>
         <div className="youtube-content">

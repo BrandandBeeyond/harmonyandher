@@ -52,7 +52,12 @@ const ThreeDimensions = () => {
                             <h4 className="pb-2">{card.title}</h4>
                             <p className="dimension-subtitle mt-3">{card.subtitle}</p>
                             <p className="dimension-description pb-2">{card.description}</p>
-                            <a href="#discover" className="dimension-button mt-4">
+                            <a
+                                href="#discover"
+                                className="dimension-button mt-4"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 150}
+                            >
                                 <span>{card.button}</span>
                                 <ArrowRight size={25} strokeWidth={1.6} aria-hidden="true" />
                             </a>
