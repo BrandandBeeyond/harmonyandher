@@ -92,7 +92,7 @@ return (
         </div>
       </section>
 
-      <section className="bg-harmony-her relative -top-[220px] min-h-[800px]"></section>
+      <section className="bg-harmony-her relative -top-[220px] min-h-[400px] sm:min-h-[800px]"></section>
       <div className="-mt-[253px]"></div>
     </>
 

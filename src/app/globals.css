@@ -2136,6 +2136,9 @@ h6 {
     height: 3.25rem;
     box-shadow: rgb(255, 253, 246) 0px 0px 0px 0.75rem;
 }
+.bg-harmony-her {
+    background: url("/images/bestbg.png") left/ cover;
+}
   .women-chapter-sec {
     height: auto;
     min-height: 0;
