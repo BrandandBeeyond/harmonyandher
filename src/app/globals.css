@@ -359,25 +359,23 @@ h6 {
   position: relative;
 }
 
-.hero-title-measure,
-.hero-title-typed {
+.hero-title-line {
   display: block;
 }
 
-.hero-title-measure span,
-.hero-title-typed span {
-  display: block;
+.hero-ordinal {
+  display: inline-block;
+  font-size: 1.15em;
+  white-space: nowrap;
 }
 
-.hero-title-measure {
-  visibility: hidden;
+.hero-ordinal sup {
+  position: relative;
+  top: -0.65em;
+  font-size: 0.45em;
+  line-height: 0;
+  vertical-align: baseline;
 }
-
-.hero-title-typed {
-  position: absolute;
-  inset: 0;
-}
-
 .hero-description {
   max-width: 360px;
   margin: 1.5rem 0 2rem;
@@ -1799,7 +1797,7 @@ h6 {
   }
 
   .bg-transformation p {
-    font-size: 0.88rem !important;
+    font-size: 0.7rem !important;
     line-height: 1.5 !important;
   }
 
@@ -1944,11 +1942,35 @@ h6 {
   .youtube-content h2,
   .happy-womans-section h2,
   .meet-rupali-copy h2 {
-    font-size: clamp(1.6rem, 4.5vw, 2.8rem) !important;
+    font-size: clamp(1.1rem, 4.5vw, 2.8rem) !important;
   }
 
   .bg-transformation h3 {
-    font-size: clamp(1.75rem, 8vw, 2.6rem) !important;
+    font-size: clamp(1.15rem, 4.5vw, 2.6rem) !important;
+  }
+  .dimension-icon {
+    flex: 0 0 63px;
+    width: 63px;
+    height: 63px;
+  }
+
+  .dimension-card h4 {
+    font-size: clamp(1.1rem, 0.6vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .dimension-button {
+    border-radius: 0.65rem;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding: 0.45rem 0.4rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    transition:
+      background 0.22s,
+      box-shadow 0.22s;
+    display: flex;
   }
 
   .meet-rupali-copy h3,
@@ -1969,5 +1991,261 @@ h6 {
 
   .happy-ring {
     transform: translateZ(0);
+  }
+}
+
+/* Reveal the mobile menu from the top like a curtain. */
+.mobile-menu-curtain[open] {
+  animation: mobile-menu-open 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mobile-menu-curtain[open][data-closing="true"] {
+  animation: mobile-menu-close 320ms cubic-bezier(0.4, 0, 1, 1) both;
+  pointer-events: none;
+}
+
+@keyframes mobile-menu-open {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes mobile-menu-close {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-curtain[open] {
+    animation-duration: 1ms;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-lead,
+  .intro-detail {
+    max-width: 80%;
+  }
+
+  .intro-actions {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .intro-button {
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    padding: 0.5rem clamp(0.5rem, 2.5vw, 0.85rem);
+    font-size: 0.75rem;
+  }
+
+  .intro-button span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .three-dimensions {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .three-dimensions .dimensions-heading h3 {
+    font-size: 1rem !important;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+  }
+
+  .dimensions-heading > div {
+    margin-top: 1rem;
+  }
+
+  .dimensions-cards {
+    width: min(100%, 19rem);
+    margin-top: 1.25rem;
+    gap: 1rem;
+  }
+
+  .dimension-card {
+    min-height: 0;
+    border-radius: 1.25rem;
+    padding: 1rem;
+  }
+
+  .dimension-icon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .dimension-card h4 {
+    margin-top: 0.65rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .dimension-card p {
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  .dimension-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .dimension-description {
+    margin-top: 0.6rem !important;
+    padding-bottom: 0;
+    font-size: 0.75rem;
+  }
+
+  .dimension-button {
+    min-height: 44px;
+    margin-top: 0.85rem;
+    padding: 0.5rem 0.6rem;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    justify-content: center;
+  }
+
+  .dimension-button svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+}
+
+.women-chapter-art {
+  display: contents;
+}
+
+@media (max-width: 640px) {
+  .youtube-play {
+    border-width: 0.18rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    box-shadow: rgb(255, 253, 246) 0px 0px 0px 0.75rem;
+}
+  .women-chapter-sec {
+    height: auto;
+    min-height: 0;
+    background: #fff;
+  }
+
+  .women-chapter-sec > div {
+    height: auto;
+    padding: 1.5rem 0 0;
+  }
+
+  .women-chapter-sec h3 {
+    color: #982b6a;
+    margin: 0 1rem;
+  }
+
+  .women-chapter-sec p {
+    color: #283d52;
+    max-width: 34rem;
+    padding: 0 1.25rem;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+
+  .women-chapter-sec p br {
+    display: none;
+  }
+
+  .women-chapter-sec > div > span {
+    color: #982b6a;
+    background: transparent;
+    margin: 0.75rem 1rem 1rem;
+    padding: 0;
+    font-size: 0.9rem;
+    letter-spacing: normal;
+  }
+
+  .women-chapter-art {
+    aspect-ratio: 2.2;
+    background: url("/images/svg/fullwolb.png") center / 100% 100% no-repeat;
+    justify-content: center;
+    align-items: flex-end;
+    width: 126%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .women-chapter-art img {
+    object-fit: contain;
+    width: 94%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    bottom: -23px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .happy-womans-section {
+    min-height: 0;
+    padding: 1.75rem 0 2rem;
+  }
+
+  .happy-womans-section h2 {
+    padding: 0 1rem;
+    letter-spacing: 0.025em;
+    line-height: 1.3;
+  }
+
+  .happy-womans-section .happy-carousel {
+    width: 100%;
+    height: clamp(185px, 55vw, 280px);
+    margin: 0.75rem 0 1rem;
+    perspective: 700px;
+    overflow: hidden;
+  }
+
+  .happy-womans-section .happy-ring {
+    width: 16vw;
+    height: clamp(105px, 31vw, 165px);
+    margin: 0;
+    left: calc(50% - 8vw);
+    top: calc(50% - clamp(52.5px, 15.5vw, 82.5px));
+  }
+
+  .happy-ring-card {
+    border-radius: 0.65rem;
+  }
+
+  .happy-womans-section .happy-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: calc(100% - 2rem);
+    gap: 0.5rem;
+    margin: 0 auto;
+  }
+
+  .happy-stats > div {
+    min-width: 0;
+  }
+
+  .happy-womans-section .happy-stats strong {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .happy-womans-section .happy-stats span {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    white-space: normal;
   }
 }

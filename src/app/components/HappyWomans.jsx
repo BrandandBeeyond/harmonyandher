@@ -22,74 +22,55 @@ export default function HappyWomans() {
     const ring = ringRef.current;
     const dragger = draggerRef.current;
     const cards = gsap.utils.toArray(".happy-ring-card", ring);
-
     if (!section || !ring || !dragger || !cards.length) return undefined;
 
     gsap.registerPlugin(Draggable);
-    const ringRadius = window.innerWidth <= 640
-      ? 165
-      : window.innerWidth <= 900
-        ? 420
-        : 560;
-
     gsap.set(ring, { rotationY: 180 });
-    gsap.set(cards, {
-      rotateY: (index) => index * -18,
-      transformOrigin: `50% 50% ${ringRadius}px`,
-      z: -ringRadius,
-      opacity: 1,
-      backfaceVisibility: "hidden",
+    const updateLayout = () => {
+      const viewport = window.innerWidth;
+      const ringRadius = viewport <= 640 ? section.clientWidth * 0.65 : viewport <= 900 ? 420 : 560;
+      gsap.set(cards, {
+        rotateY: (index) => index * -18,
+        transformOrigin: `50% 50% ${ringRadius}px`,
+        z: -ringRadius,
+        backfaceVisibility: "hidden",
+      });
+    };
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    const entrance = gsap.fromTo(cards, { y: 80, opacity: 0 }, {
+      duration: 1.2, y: 0, opacity: 1, stagger: 0.045, ease: "expo.out",
     });
-
-    const entrance = gsap.fromTo(
-      cards,
-      { y: 80, opacity: 0 },
-      {
-        duration: 1.2,
-        y: 0,
-        opacity: 1,
-        stagger: 0.045,
-        ease: "expo.out",
-      }
-    );
-
     let previousX = 0;
     const draggable = Draggable.create(dragger, {
       type: "x",
-      allowNativeTouchScrolling: false,
-      onPress() {
-        previousX = this.x;
-      },
+      allowNativeTouchScrolling: true,
+      onPress() { previousX = this.x; },
       onDrag() {
         const delta = this.x - previousX;
+        gsap.killTweensOf(ring);
         gsap.set(ring, { rotationY: `+=${delta * 0.42}` });
         previousX = this.x;
       },
-      onRelease() {
-        gsap.set(dragger, { x: 0 });
-      },
+      onRelease() { gsap.set(dragger, { x: 0 }); },
     });
-
     const handleWheel = (event) => {
       const direction = event.deltaY < 0 ? 1 : -1;
       gsap.to(ring, {
         rotationY: `+=${direction * 18}`,
-        duration: 0.65,
-        ease: "power2.out",
-        overwrite: true,
+        duration: 0.65, ease: "power2.out", overwrite: true,
       });
     };
-
     section.addEventListener("wheel", handleWheel, { passive: true });
-
     return () => {
+      window.removeEventListener("resize", updateLayout);
       entrance.kill();
+      gsap.killTweensOf(ring);
       section.removeEventListener("wheel", handleWheel);
       draggable.forEach((instance) => instance.kill());
     };
   }, []);
-
-  return (
+return (
     <>
       <section ref={sectionRef} className="happy-womans-section" aria-labelledby="happy-womans-title">
         <h2 id="happy-womans-title">Women Growing in Harmony</h2>

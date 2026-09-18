@@ -10,7 +10,8 @@ const WomenChapter = () => {
               m-0
               mt-[5px]
               font-serif
-              text-[clamp(27px,5.7vw,42px)]
+              text-[clamp(14px,3.7vw,22px)]
+              md:text-[clamp(27px,5.7vw,42px)]
               font-semibold
               leading-[1.3]
               tracking-[-0.5px]
@@ -24,9 +25,11 @@ const WomenChapter = () => {
 
                 <p
                     className="
-              mt-[8px]
+                    mt-[5px]
+              md:mt-[8px]
               font-serif
-               text-[18px]
+              text-[12px]
+               md:text-[18px]
               font-normal
               leading-[1.3]
               tracking-[0.5px]
@@ -57,6 +60,7 @@ const WomenChapter = () => {
 
                 </span>
 
+                <div className="women-chapter-art">
                 <Image
                     src="/images/svg/womens.png"
                     alt="Women supporting one another"
@@ -64,6 +68,7 @@ const WomenChapter = () => {
                     height={605}
                     className="mx-auto mt-4 h-auto w-[min(90vw,900px)] object-contain"
                 />
+                </div>
             </div>
         </section>
     );

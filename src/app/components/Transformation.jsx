@@ -55,7 +55,7 @@ export default function Transformation() {
               font-serif
               text-[clamp(32px,6.2vw,58px)]
               font-semibold
-              italic
+              not-italic
               leading-[1.07]
               tracking-[-0.5px]
               text-[#a52a70]
@@ -72,7 +72,7 @@ export default function Transformation() {
               max-w-[760px]
               font-serif
               text-[clamp(17px,1.35vw,22px)]
-              font-semibold
+              font-normal
               leading-[1.55]
               text-[#283d52]
             "
@@ -83,7 +83,7 @@ export default function Transformation() {
               </p>
 
               <p className="mt-[2px]">
-                And somewhere along the way,
+                And somewhere along the way,{" "}
 
                 <span className="text-[#a52a70]">
                she forgets herself.
