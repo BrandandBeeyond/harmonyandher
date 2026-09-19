@@ -14,7 +14,7 @@ return (
             priority
           />
           <Image
-            src="/images/svg/rupalisurana.png"
+            src="/images/svg/womenbanner.png"
             alt=""
             width={590}
             height={644}

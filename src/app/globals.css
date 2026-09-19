@@ -35,7 +35,7 @@ html.lenis body {
 
 body {
   margin: 0;
-  background: var(--primary-light);
+  background:#fffef0;
   color: var(--primary-light);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
@@ -2250,5 +2250,45 @@ h6 {
     font-size: 0.7rem;
     line-height: 1.35;
     white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    background-image: url("/images/svg/footer-mob-bg.png");
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .site-footer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-position: center;
+  }
+
+  .site-footer-description,
+  .site-footer-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-footer-links nav,
+  .site-footer-connect {
+    justify-items: center;
+  }
+
+  .site-footer-bottom {
+    align-items: center;
+    text-align: center;
   }
 }
