@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { ArrowRight, LeafIcon } from "lucide-react";
 
 const cards = [
     {
         title: "Professional Harmony",
+        icon: '/images/svg/business.png',
         subtitle: "Grow professionally without losing yourself.",
         description:
             "Build career clarity, confidence and leadership while managing pressure, ambition and growth.",
@@ -10,6 +12,7 @@ const cards = [
     },
     {
         title: "Personal Harmony",
+        icon: '/images/svg/wellness.png',
         subtitle: "Come back to yourself.",
         description:
             "Reconnect with your emotions, identity, confidence, well-being and inner peace.",
@@ -17,6 +20,7 @@ const cards = [
     },
     {
         title: "Family Harmony",
+        icon: '/images/svg/family.png',
         subtitle: "Love deeply without losing yourself.",
         description:
             "Create stronger relationships through communication, compassion, bonding and healthy boundaries.",
@@ -48,7 +52,9 @@ const ThreeDimensions = () => {
                             key={index}
                             className="dimension-card"
                         >
-                            <div className="dimension-icon" aria-hidden="true" />
+                            <div className="dimension-icon" aria-hidden="true">
+                                <Image src={card.icon} alt="" width={54} height={54} className="dimension-icon-image" />
+                            </div>
                             <h4 className="pb-2">{card.title}</h4>
                             <p className="dimension-subtitle mt-3">{card.subtitle}</p>
                             <p className="dimension-description pb-2">{card.description}</p>

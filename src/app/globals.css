@@ -2292,3 +2292,16 @@ h6 {
     text-align: center;
   }
 }
+
+.dimension-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dimension-icon .dimension-icon-image {
+    object-fit: contain;
+    width: 56%;
+    height: 56%;
+}
