@@ -33,8 +33,8 @@ export default function Footer() {
         <div className="site-footer-connect">
           <h2 id="footer-title">Connect</h2>
           <span className="site-footer-rule" aria-hidden="true" />
-          <p>Phone: <a href="#">+91 -9876543219</a></p>
-          <p>Email: <a href="mailto:">xyz@gmail.com</a></p>
+          <p>Phone: <a href="tel:+917030081814">+91 70300 81814</a></p>
+          <p><a href="https://wa.me/917030081814">Chat on WhatsApp</a></p>
           <a href="#">Instagram</a>
           <a href="#">YouTube</a>
         </div>
