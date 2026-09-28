@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { Draggable } from "gsap/Draggable";
 import { gsap } from "gsap";
 
@@ -77,7 +78,16 @@ return (
         <div className="happy-carousel" aria-label="Drag to explore stories of happy women">
           <div ref={ringRef} className="happy-ring">
             {Array.from({ length: cardCount }, (_, index) => (
-              <div className="happy-ring-card" key={index} aria-hidden="true" />
+              <div className="happy-ring-card" key={index} aria-hidden="true">
+                <Image
+                  src={`/images/slider/happy${(index % 8) + 1}.jpg`}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 32vw, 152px"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  draggable={false}
+                />
+              </div>
             ))}
           </div>
           <div ref={draggerRef} className="happy-dragger" aria-hidden="true" />
