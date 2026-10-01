@@ -12,15 +12,18 @@ import ScrollReveal from "./components/ScrollReveal";
 export default function Home() {
   return (
     <main>
-      <section className="hero-banner" aria-labelledby="hero-title">
+      <section className="hero-banner hero-banner-new" aria-labelledby="hero-title">
+        {/* Previous gradient, star, glow, and overlay hero layers are disabled for the new image hero. */}
+        {/*
         <div className="hero-stars" aria-hidden="true" />
         <div className="hero-glow hero-glow-left" aria-hidden="true" />
         <div className="hero-glow hero-glow-top" aria-hidden="true" />
         <div className="hero-beam hero-beam-one" aria-hidden="true" />
         <div className="hero-beam hero-beam-two" aria-hidden="true" />
+        */}
 
         <Navbar />
-        <HeroSection/>
+        <HeroSection />
       
       </section>
 

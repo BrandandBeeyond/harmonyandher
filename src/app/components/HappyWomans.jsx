@@ -11,7 +11,9 @@ const stats = [
   { number: "100+", label: "Workshops & Experiences" },
 ];
 
-const cardCount = 20;
+// Twelve positions complete the ring; six cards remain visible across the front arc.
+const cardCount = 12;
+const cardAngle = 30;
 
 export default function HappyWomans() {
   const sectionRef = useRef(null);
@@ -29,9 +31,13 @@ export default function HappyWomans() {
     gsap.set(ring, { rotationY: 180 });
     const updateLayout = () => {
       const viewport = window.innerWidth;
-      const ringRadius = viewport <= 640 ? section.clientWidth * 0.65 : viewport <= 900 ? 420 : 560;
+      const ringRadius = viewport <= 640
+        ? Math.min(section.clientWidth * 0.45, 190)
+        : viewport <= 900
+          ? 420
+          : 560;
       gsap.set(cards, {
-        rotateY: (index) => index * -18,
+        rotateY: (index) => index * -cardAngle,
         transformOrigin: `50% 50% ${ringRadius}px`,
         z: -ringRadius,
         backfaceVisibility: "hidden",
@@ -42,6 +48,11 @@ export default function HappyWomans() {
     const entrance = gsap.fromTo(cards, { y: 80, opacity: 0 }, {
       duration: 1.2, y: 0, opacity: 1, stagger: 0.045, ease: "expo.out",
     });
+    let rotationY = 180;
+    const rotateTo = gsap.quickTo(ring, "rotationY", {
+      duration: 0.42,
+      ease: "power2.out",
+    });
     let previousX = 0;
     const draggable = Draggable.create(dragger, {
       type: "x",
@@ -49,23 +60,21 @@ export default function HappyWomans() {
       onPress() { previousX = this.x; },
       onDrag() {
         const delta = this.x - previousX;
-        gsap.killTweensOf(ring);
-        gsap.set(ring, { rotationY: `+=${delta * 0.42}` });
+        rotationY += delta * 0.42;
+        rotateTo(rotationY);
         previousX = this.x;
       },
       onRelease() { gsap.set(dragger, { x: 0 }); },
     });
     const handleWheel = (event) => {
-      const direction = event.deltaY < 0 ? 1 : -1;
-      gsap.to(ring, {
-        rotationY: `+=${direction * 18}`,
-        duration: 0.65, ease: "power2.out", overwrite: true,
-      });
+      rotationY += Math.sign(event.deltaY) * -18;
+      rotateTo(rotationY);
     };
     section.addEventListener("wheel", handleWheel, { passive: true });
     return () => {
       window.removeEventListener("resize", updateLayout);
       entrance.kill();
+      rotateTo.tween?.kill();
       gsap.killTweensOf(ring);
       section.removeEventListener("wheel", handleWheel);
       draggable.forEach((instance) => instance.kill());
@@ -80,11 +89,12 @@ return (
             {Array.from({ length: cardCount }, (_, index) => (
               <div className="happy-ring-card" key={index} aria-hidden="true">
                 <Image
-                  src={`/images/slider/happy${(index % 8) + 1}.jpg`}
+                  src={`/images/slider/optimized/happy${(index % 6) + 1}.jpg`}
                   alt=""
                   fill
                   sizes="(max-width: 640px) 32vw, 152px"
                   style={{ objectFit: "cover", objectPosition: "center" }}
+                  loading="eager"
                   draggable={false}
                 />
               </div>

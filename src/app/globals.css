@@ -35,7 +35,7 @@ html.lenis body {
 
 body {
   margin: 0;
-  background:#fffef0;
+  background: #fffef0;
   color: var(--primary-light);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
@@ -1099,6 +1099,176 @@ h6 {
   }
 }
 
+/* New image-based hero. The previous gradient hero remains available in the stylesheet but is disabled in page.js. */
+.hero-banner-new {
+  min-height: min(100svh, 760px);
+  overflow: hidden;
+  background: url("/images/bg/harmonyhernewhero.jpeg") center / cover no-repeat;
+}
+
+.hero-banner-new::after,
+.hero-banner-new .hero-stars,
+.hero-banner-new .hero-glow,
+.hero-banner-new .hero-beam {
+  display: none;
+}
+
+.hero-banner-new header {
+  z-index: 10;
+}
+
+.hero-banner-new .hero-nav-logo {
+  width: 100px;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(49%) saturate(2200%)
+    hue-rotate(302deg) brightness(82%) contrast(91%);
+}
+
+.hero-banner-new header nav a {
+  color: #a5286e;
+  font-weight: 500;
+}
+
+.hero-banner-new header nav a:hover {
+  color: #7e1d55;
+}
+
+.hero-banner-new header > div > div > button {
+  border-color: rgba(165, 40, 110, 0.45);
+  background: rgba(255, 255, 255, 0.45);
+  color: #a5286e;
+}
+
+.hero-copy-new {
+  width: min(calc(100% - 3rem), 500px);
+  margin-left: max(2rem, calc((100vw - 1400px) / 2 + 8rem));
+  padding-top: clamp(4rem, 15vh, 9rem);
+}
+
+.hero-copy-new .hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 0 1rem;
+  color: #a4778f;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-copy-new .hero-eyebrow span {
+  color: #a5286e;
+}
+
+.hero-copy-new h1 {
+  color: #a5286e;
+  letter-spacing: -0.035em;
+  max-width: 500px;
+  font-size: clamp(2.5rem, 3.4vw, 3.1rem);
+  font-weight: 500;
+  line-height: 1.03;
+}
+.hero-title-line {
+  display: block;
+}
+
+.hero-ordinal sup {
+  position: relative;
+  top: -0.35em;
+  font-size: 0.5em;
+}
+
+.hero-copy-new .hero-description {
+  max-width: 360px;
+  margin: 1.25rem 0 1.5rem;
+  color: #414044;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.hero-copy-new .hero-cta {
+  border: 0;
+  padding: 0.85rem 1.25rem 0.85rem 1.4rem;
+  background: #b32d76;
+  color: #fff;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-copy-new .hero-cta:hover {
+  background: #8e205c;
+}
+
+.hero-copy-new .hero-signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  color: #a5286e;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.hero-copy-new .hero-signature span {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background: #a5286e;
+}
+
+@media (max-width: 1023px) {
+  .hero-copy-new {
+    margin-left: 2rem;
+    padding-top: 11rem;
+  }
+
+  .hero-banner-new .hero-nav-logo {
+    width: 110px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-banner-new {
+    min-height: 760px;
+    background-position: 68% center;
+  }
+
+  .hero-banner-new .hero-nav-logo {
+    width: 90px;
+  }
+
+  .hero-copy-new {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding-top: 4rem;
+  }
+
+  .hero-copy-new .hero-eyebrow {
+    gap: 0.45rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-copy-new h1 {
+    max-width: 17rem;
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .hero-copy-new .hero-description {
+    max-width: 15rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-copy-new .hero-signature {
+    font-size: 0.75rem;
+  }
+}
+
 .happy-womans-section {
   position: relative;
   min-height: 42rem;
@@ -1136,6 +1306,7 @@ h6 {
   height: 18rem;
   margin: -9rem 0 0 -4.75rem;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .happy-ring-card {
@@ -1150,6 +1321,7 @@ h6 {
   background-size: auto 100%;
   box-shadow: 0 12px 22px rgba(84, 34, 60, 0.2);
   transform-style: preserve-3d;
+  will-change: transform, opacity;
 }
 
 .happy-ring-card::after {
@@ -1686,6 +1858,30 @@ h6 {
   }
 }
 
+/* Keep the new hero mobile rules last so legacy hero overrides cannot change it. */
+@media (max-width: 640px) {
+  .hero-banner-new {
+    min-height: 760px;
+    background-position: 68% center;
+  }
+
+  .hero-banner-new .hero-copy-new {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding-top: 9rem;
+  }
+
+  .hero-banner-new .hero-copy-new h1 {
+    max-width: 17rem;
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .hero-banner-new .hero-copy-new .hero-description {
+    max-width: 15rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* Final mobile layout pass: keep every section inside the viewport. */
 @media (max-width: 640px) {
   .hero-banner {
@@ -2135,10 +2331,10 @@ h6 {
     width: 3.25rem;
     height: 3.25rem;
     box-shadow: rgb(255, 253, 246) 0px 0px 0px 0.75rem;
-}
-.bg-harmony-her {
+  }
+  .bg-harmony-her {
     background: url("/images/bestbg.png") left/ cover;
-}
+  }
   .women-chapter-sec {
     height: auto;
     min-height: 0;
@@ -2196,7 +2392,6 @@ h6 {
     bottom: -23px;
   }
 }
-
 
 @media (max-width: 640px) {
   .happy-womans-section {
@@ -2301,7 +2496,30 @@ h6 {
 }
 
 .dimension-icon .dimension-icon-image {
-    object-fit: contain;
-    width: 56%;
-    height: 56%;
+  object-fit: contain;
+  width: 56%;
+  height: 56%;
+}
+
+@media (max-width: 640px) {
+  .hero-banner-new {
+    min-height: 760px;
+    background-position: 68% center;
+  }
+
+  .hero-banner-new .hero-copy-new {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding-top: 9rem;
+  }
+
+  .hero-banner-new .hero-copy-new h1 {
+    max-width: 17rem;
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .hero-banner-new .hero-copy-new .hero-description {
+    max-width: 15rem;
+    font-size: 0.75rem;
+  }
 }
