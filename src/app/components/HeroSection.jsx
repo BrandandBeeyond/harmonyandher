@@ -19,7 +19,7 @@ export default function HeroSection() {
       </p>
       <a
         href="#discover"
-        className="hero-cta"
+        className="hero-cta mt-10"
         data-aos="fade-up"
         data-aos-delay="300"
       >
