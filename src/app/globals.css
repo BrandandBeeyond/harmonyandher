@@ -1234,8 +1234,31 @@ h6 {
 
 @media (max-width: 640px) {
   .hero-banner-new {
-    min-height: 760px;
+    min-height: 680px;
     background-position: 68% center;
+  }
+
+  .hero-banner-new::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.9) 38%,
+      rgba(255, 255, 255, 0.52) 64%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .hero-banner-new > header,
+  .hero-banner-new > .hero-copy {
+    position: relative;
+    z-index: 2;
   }
 
   .hero-banner-new .hero-nav-logo {
@@ -2346,10 +2369,10 @@ h6 {
 
 /* Keep the new hero mobile rules last so legacy hero overrides cannot change it. */
 @media (max-width: 640px) {
-  .hero-banner-new {
-    min-height: 760px;
-    background-position: 68% center;
-  }
+.hero-banner-new {
+    background-position: 79%;
+    min-height: 524px;
+}
 
   .hero-banner-new .hero-copy-new {
     width: calc(100% - 2rem);
@@ -2711,6 +2734,23 @@ h6 {
 }
 
 @media (max-width: 640px) {
+  .mobile-menu-curtain nav a {
+    color: #fff !important;
+    opacity: 1;
+  }
+
+  .hero-banner-new .hero-copy-new .hero-cta {
+    gap: 0.65rem;
+    padding: 0.52rem 0.9rem 0.52rem 1rem;
+    font-size: 0.58rem;
+  }
+
+  .hero-banner-new .hero-copy-new .hero-cta span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
   .intro-lead,
   .intro-detail {
     max-width: 80%;
@@ -2988,10 +3028,10 @@ h6 {
 }
 
 @media (max-width: 640px) {
-  .hero-banner-new {
-    min-height: 760px;
-    background-position: 68% center;
-  }
+.hero-banner-new {
+    background-position: 79%;
+    min-height: 524px;
+}
 
   .hero-banner-new .hero-copy-new {
     width: calc(100% - 2rem);
