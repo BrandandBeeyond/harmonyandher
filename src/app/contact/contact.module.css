@@ -1,10 +1,11 @@
 .page{background:#fffef0;color:#414042;font-family:var(--font-poppins),sans-serif}
-.hero{position:relative;color:#fffef0;background:radial-gradient(ellipse at 85% 20%,#c968a14d,transparent 50%),linear-gradient(115deg,#a52369,#651750)}
+.hero{position:relative;color:#414042;background:linear-gradient(180deg,#fffef0f5 0%,#fffef0d9 55%,#fffef0 100%),url("/images/bg/harmonyhernewhero.jpeg") center/cover no-repeat}
 .heroCopy{max-width:950px;margin:auto;padding:190px 24px 80px;text-align:center}
+.heroCopy .eyebrow{color:#982b6a}
 .eyebrow{font-size:11px;font-weight:600;letter-spacing:.23em;line-height:1.6}
 .heroCopy h1{margin:20px 0;font-size:clamp(38px,5vw,66px);font-weight:400;line-height:1.16;letter-spacing:-.025em}
-.heroCopy h1 em{color:#f5cedc}
-.heroCopy>p:last-child{max-width:540px;margin:auto;color:#f4dfea;font-size:14px;line-height:1.9}
+.heroCopy h1 em{color:#982b6a}
+.heroCopy>p:last-child{max-width:540px;margin:auto;color:#5a5258;font-size:14px;line-height:1.9}
 .content{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,100px);max-width:1180px;margin:auto;padding:80px 32px 56px}
 .intro{padding-top:20px}
 .intro .eyebrow,.card .eyebrow{color:#982b6a}

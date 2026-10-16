@@ -71,9 +71,7 @@ const certifications = [
 export default function AboutRupaliPage() {
   return (
     <div className={styles.page}>
-      <div className={styles.navBand}>
-        <Navbar />
-      </div>
+      <Navbar />
 
       <main>
         <section className={styles.hero} aria-labelledby="about-title">

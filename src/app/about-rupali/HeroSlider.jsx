@@ -22,19 +22,21 @@ export default function HeroSlider() {
 
   return (
     <div className={styles.portrait} data-aos="fade-left" aria-roledescription="carousel" aria-label="Rupali Surana and ice bath experiences">
-      <div className={styles.slideTrack} style={{ transform: `translateX(-${active * 100}%)` }}>
-        {slides.map((slide, index) => (
-          <div key={slide.src} className={styles.slide} aria-hidden={index !== active}>
-            <Image
-              src={slide.src}
-              alt={slide.alt}
-              fill
-              priority={index === 0}
-              sizes="(max-width: 800px) 80vw, 380px"
-              style={{ objectPosition: slide.position }}
-            />
-          </div>
-        ))}
+      <div className={styles.slideViewport}>
+        <div className={styles.slideTrack} style={{ transform: `translateX(-${active * 100}%)` }}>
+          {slides.map((slide, index) => (
+            <div key={slide.src} className={styles.slide} aria-hidden={index !== active}>
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={index === 0}
+                sizes="(max-width: 800px) 80vw, 420px"
+                style={{ objectPosition: slide.position }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       <div className={styles.slideDots}>
         {slides.map((slide, index) => (
