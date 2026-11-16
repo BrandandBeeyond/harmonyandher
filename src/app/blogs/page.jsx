@@ -59,6 +59,35 @@ export default function BlogsPage() {
             </Link>
           </div>
         </article>
+
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
+              src="/images/slider/optimized/happy2.jpg"
+              alt="Ice bath therapy for stress relief at Touchwood Bliss, Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>Stress Relief</span>
+              <span>7 min read</span>
+            </div>
+            <h2>Ice bath therapy for stress relief: find calm in the cold.</h2>
+            <p>
+              Learn how guided cold water immersion calms the nervous system,
+              lifts your mood and builds resilience to everyday stress.
+            </p>
+            <p>
+              Experience it safely with Rupali Surana at Touchwood Bliss,
+              Igatpuri, near Nashik and Mumbai.
+            </p>
+            <Link className="blog-read-more" href="/blogs/ice-bath-therapy-for-stress-relief">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
       </section>
     </main>
   );
