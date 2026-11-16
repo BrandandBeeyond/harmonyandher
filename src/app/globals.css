@@ -3169,3 +3169,72 @@ h6 {
 .blog-feature-card + .blog-feature-card {
   margin-top: 2.5rem;
 }
+
+.inner-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.inner-card {
+  background: #f4e6e4;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 14px 35px #47233518;
+}
+
+.inner-card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.inner-card-image img {
+  object-fit: cover;
+}
+
+.inner-card-copy {
+  padding: 1.5rem 1.6rem 1.8rem;
+}
+
+.inner-card-step {
+  color: #a5286e;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+}
+
+.inner-card-copy h3 {
+  font-family: var(--font-playfair-display), serif;
+  color: #24364b;
+  font-size: 1.5rem;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.inner-card-copy p {
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.inner-cta {
+  text-align: center;
+}
+
+.inner-cta h2 {
+  font-family: var(--font-playfair-display), serif;
+  color: #24364b;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.8rem;
+}
+
+.inner-cta p {
+  max-width: 40rem;
+  margin: 0 auto 1.6rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+@media (min-width: 1000px) {
+  .inner-card-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
