@@ -88,6 +88,59 @@ export default function BlogsPage() {
             </Link>
           </div>
         </article>
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
+              src="/images/best2.png"
+              alt="A woman in the first moments of an ice bath at Touchwood Bliss, Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>The Science of Cold</span>
+              <span>6 min read</span>
+            </div>
+            <h2>What happens to a woman&apos;s body in the first 60 seconds of an ice bath?</h2>
+            <p>
+              From the cold shock gasp to the shift into calm, here is what your body goes through, second by second.
+            </p>
+            <p>
+              Learn how to breathe through it safely with Rupali Surana at Touchwood Bliss, Igatpuri.
+            </p>
+            <Link className="blog-read-more" href="/blogs/first-60-seconds-of-an-ice-bath">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
+
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
+              src="/images/bg/bgintro.png"
+              alt="A woman building mental resilience in a guided ice bath in Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>Mind and Resilience</span>
+              <span>6 min read</span>
+            </div>
+            <h2>Beyond the chill: how ice baths help women embrace mental resilience.</h2>
+            <p>
+              Discover how the cold trains you to pause, stay grounded and trust your own strength.
+            </p>
+            <p>
+              A women-centred ice bath experience near Nashik and Mumbai.
+            </p>
+            <Link className="blog-read-more" href="/blogs/ice-bath-mental-resilience-for-women">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
       </section>
     </main>
   );
