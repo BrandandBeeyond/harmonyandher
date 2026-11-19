@@ -31,6 +31,87 @@ export default function BlogsPage() {
         <article className="blog-feature-card">
           <div className="blog-feature-image">
             <Image
+              src="/images/women1.png"
+              alt="A woman pausing for herself before ice bath therapy in Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>Women&apos;s Self-Care</span>
+              <span>6 min read</span>
+            </div>
+            <h2>The woman who always says &quot;I&apos;m fine&quot;: finding a moment for herself through ice bath therapy.</h2>
+            <p>
+              For every woman who puts herself last, a few guided minutes in the cold can become a moment that is only hers.
+            </p>
+            <p>
+              Ice bath therapy for women with Rupali Surana at Touchwood Bliss, Igatpuri.
+            </p>
+            <Link className="blog-read-more" href="/blogs/ice-bath-therapy-for-women-in-igatpuri">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
+
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
+              src="/images/slider/optimized/happy3.jpg"
+              alt="A woman preparing for a guided ice bath at a women&apos;s wellness retreat in Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>Women&apos;s Wellness</span>
+              <span>6 min read</span>
+            </div>
+            <h2>The invisible weight women carry: can cold water become a moment of release?</h2>
+            <p>
+              Explore how guided cold water therapy helps women set down the mental load, even for a few minutes.
+            </p>
+            <p>
+              A women&apos;s wellness retreat near Mumbai and Nashik, at Touchwood Bliss, Igatpuri.
+            </p>
+            <Link className="blog-read-more" href="/blogs/womens-wellness-retreat-in-igatpuri-ice-bath-therapy">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
+
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
+              src="/images/slider/optimized/happy4.jpg"
+              alt="A woman smiling during her first ice bath at Touchwood Bliss, Igatpuri"
+              fill
+              sizes="(max-width: 400px) 100vw, 32vw"
+            />
+          </div>
+          <div className="blog-feature-copy">
+            <div className="blog-meta">
+              <span>First Ice Bath</span>
+              <span>6 min read</span>
+            </div>
+            <h2>What does your mind say when your body says no? A woman&apos;s first ice bath challenge.</h2>
+            <p>
+              From the body&apos;s first &quot;no&quot; to a calm &quot;I can&quot;, here is what your first guided ice bath really feels like.
+            </p>
+            <p>
+              Begin with Rupali Surana at Touchwood Bliss, Igatpuri.
+            </p>
+            <Link className="blog-read-more" href="/blogs/first-ice-bath-experience-for-women-touchwood-bliss">
+              Read the full story <span aria-hidden="true">&#8594;</span>
+            </Link>
+          </div>
+        </article>
+
+        <article className="blog-feature-card">
+          <div className="blog-feature-image">
+            <Image
               src="/images/slider/optimized/happy4.jpg"
               alt="A woman experiencing an ice bath with support"
               fill
